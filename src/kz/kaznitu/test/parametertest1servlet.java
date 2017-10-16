@@ -8,11 +8,13 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class parametertest1servlet extends HttpServlet {
-    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
+    {
      resp.setContentType("text/html");
 
         PrintWriter out = resp.getWriter();
-        String title = "Using GET Methot to Read Form Data";
+        String title = "Using POST Methot to Read Form Data";
         String docType =
                 "<!doctype html>\n";
 
