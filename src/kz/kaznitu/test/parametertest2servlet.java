@@ -10,7 +10,7 @@ import java.util.Enumeration;
 
 public class parametertest2servlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
 
         PrintWriter out = resp.getWriter();
@@ -24,10 +24,10 @@ public class parametertest2servlet extends HttpServlet {
                 "<body bgcolor = \"#f0f0f0\">\n" +
                 "<h1 align =\"center\">" + title + "</h1>\n" +
                 "<table width = \"100%\" border = \"1\" align = \"center\">\n" +
-                "<tr bgcolor =\"#949494\">\n" +
-                "<th> Param Name</th>\n" +
-                "<th>Param Value(s) </th>\n" +
-                "</tr>\n"
+                "<tr bgcolor = \"#949494\">\n" +
+                "<th>Param Name</th>\n" +
+                "<th>Param Value(s)</th>\n" +
+        "</tr>\n"
         );
 
         Enumeration paramNames = req.getParameterNames();
